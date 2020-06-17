@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Connect</string>
+    <string-array name="distance_units">
+        <item>miles</item>
+        <item>kms</item>
+    </string-array>
+
+    <string-array name="currency_units">
+        <item>USD</item>
+        <item>INR</item>
+    </string-array>
+
+    <string-array name="web_address_ends">
+        <item>.com</item>
+        <item>.net</item>
+        <item>.edu</item>
+        <item>.org</item>
+        <item>.gov</item>
+    </string-array>
+
+</resources>
