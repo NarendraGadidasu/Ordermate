@@ -58,6 +58,16 @@
         android:textAppearance="@android:style/TextAppearance.Medium"
         android:textStyle="bold"/>
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:hint="example: www.amazon.com"
+        android:inputType="text"/>
+
+    <!--
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -87,6 +97,7 @@
             android:entries="@array/web_address_ends"/>
 
     </LinearLayout>
+    -->
 
 
     <TextView
@@ -187,14 +198,17 @@
         android:layout_margin="8dp" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="2"
         android:layout_margin="8dp"
+        android:padding="8dp"
+        android:layout_gravity="center"
         android:text="Find my Ordermate!"
         android:textColor = "#FFFFFF"
         android:textAppearance="@android:style/TextAppearance.Medium"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:background="@drawable/round_button"/>
 
     <View
         android:layout_width="match_parent"
