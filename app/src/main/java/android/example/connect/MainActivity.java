@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /**hide action bar*/
+        getSupportActionBar().hide();
+
         Button findMyOrdermate = (Button) findViewById(R.id.find_my_ordermate);
 
         findMyOrdermate.setOnClickListener(new View.OnClickListener() {
