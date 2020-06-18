@@ -18,7 +18,7 @@
         </activity>
         <activity
             android:name=".LeadsActivity"
-            android:label="Leads" />
+            android:label="Ordermate Leads" />
         <activity android:name=".MainActivity">
         </activity>
     </application>

@@ -10,6 +10,12 @@
         <item>INR</item>
     </string-array>
 
+    <string-array name="time_units">
+        <item>hours</item>
+        <item>days</item>
+        <item>weeks</item>
+    </string-array>
+
     <string-array name="web_address_ends">
         <item>.com</item>
         <item>.net</item>
