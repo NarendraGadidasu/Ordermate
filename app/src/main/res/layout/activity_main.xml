@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:gravity="center_horizontal"
-        android:text="Connect"
+        android:text="Ordermate"
         android:textSize="32dp"
         android:textColor = "@color/colorPrimaryDark"
         android:textStyle="bold"/>
@@ -203,15 +203,14 @@
     <Button
         android:id="@+id/find_my_ordermate"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:layout_margin="8dp"
+        android:layout_height="64dp"
         android:padding="16dp"
         android:layout_gravity="center"
         android:text="Find my Ordermate!"
         android:textColor = "#FFFFFF"
         android:textAppearance="@android:style/TextAppearance.Medium"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:background="@drawable/dark_color_button"/>
 
     <View
         android:layout_width="match_parent"

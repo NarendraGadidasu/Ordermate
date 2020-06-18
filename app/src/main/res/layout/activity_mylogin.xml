@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:gravity="center_horizontal"
-        android:text="Connect"
+        android:text="Ordermate"
         android:textSize="32dp"
         android:textColor = "@color/colorPrimary"
         android:textStyle="bold"/>
