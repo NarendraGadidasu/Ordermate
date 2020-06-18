@@ -2,7 +2,12 @@ package android.example.connect;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -31,7 +36,11 @@ public class LeadsActivity extends AppCompatActivity {
         leads.add(new Lead("Sud", 3.9, 1.5, 23));
         leads.add(new Lead("Sus", 3.7, 1.6, 17));
         leads.add(new Lead("Ravi", 4.1, 2.1, 26));
-    }
 
+        LeadAdapter itemsAdapter = new LeadAdapter(this, leads);
+        ListView listView = (ListView) findViewById(R.id.leads_list);
+        listView.setAdapter(itemsAdapter);
+
+    }
 
 }

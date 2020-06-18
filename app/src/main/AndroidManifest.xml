@@ -9,13 +9,17 @@
         android:roundIcon="@mipmap/paper_people_hires_2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LeadsActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MyloginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".LeadsActivity"
+            android:label="Leads" />
+        <activity android:name=".MainActivity">
         </activity>
     </application>
 
