@@ -23,12 +23,9 @@ public class MainActivity extends AppCompatActivity {
         findMyOrdermate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Request(int userId, long requestId, String loc, String bus, double yAmt, double eAmt, double mDist, double mWait);
                 Intent intent = new Intent(MainActivity.this, LeadsActivity.class);
                 startActivity(intent);
             }
         });
     }
-
-
 }
