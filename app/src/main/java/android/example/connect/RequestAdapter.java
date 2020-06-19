@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.RatingBar;
@@ -31,11 +32,11 @@ public class RequestAdapter extends ArrayAdapter<Request> {
      * @param requests Array list of Word objects
      */
     public RequestAdapter(Activity context, ArrayList<Request> requests){
-        super(context, 0, leads);
+        super(context, 0, requests);
     }
 
     /**Overriding the behavior of getView function defined in the
-     * ArrayAdapter<Lead> class
+     * ArrayAdapter<Request> class
      * *
      * @param position The position from which the data needs to be fetched from the array list words
      * @param convertView The view which needs to be populated with the data
@@ -49,54 +50,36 @@ public class RequestAdapter extends ArrayAdapter<Request> {
         View listItemView = convertView;
 
         if (listItemView == null){
-            listItemView =  LayoutInflater.from(getContext()).inflate(R.layout.leads_list_item, parent, false);
+            listItemView =  LayoutInflater.from(getContext()).inflate(R.layout.my_requests_list_item, parent, false);
         }
 
         final int pos = position;
 
-        Lead currentLead = getItem(position);
+        Request currentRequest = getItem(position);
 
-        TextView nameTextView = (TextView) listItemView.findViewById(R.id.list_item_name);
+        TextView locationTextView = (TextView) listItemView.findViewById(R.id.my_requests_location);
 
-        nameTextView.setText(currentLead.getName());
+        locationTextView.setText(currentRequest.getLocation());
 
-        RatingBar ratingBar = (RatingBar) listItemView.findViewById(R.id.list_item_rating);
+        TextView businessTextView = (TextView) listItemView.findViewById(R.id.my_requests_business);
 
-        ratingBar.setRating(Float.parseFloat(currentLead.getRating()+""));
+        businessTextView.setText(currentRequest.getBusiness());
 
-        TextView distanceTextView = listItemView.findViewById(R.id.list_item_distance);
+        TextView myAmountTextView = listItemView.findViewById(R.id.my_requests_my_amount);
 
-        distanceTextView.setText("Distance: "+currentLead.getDistance());
+        myAmountTextView.setText("My Amount: "+currentRequest.getYourAmount());
 
-        TextView amountTextView = listItemView.findViewById(R.id.list_item_amount);
+        TextView expectedAmountTextView = listItemView.findViewById(R.id.my_requests_expected_amount);
 
-        amountTextView.setText("Amount: "+currentLead.getAmount());
+        expectedAmountTextView.setText("Expected: "+currentRequest.getExpectedAmount());
 
-        Button connectButton = (Button) listItemView.findViewById(R.id.list_item_connect);
-        connectButton.setOnClickListener(new View.OnClickListener() {
+        Button findLeadsButton = (Button) listItemView.findViewById(R.id.my_requests_find_leads);
+        findLeadsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Context context = LeadAdapter.super.getContext();
-                /**Intent intent = new Intent(context, MainActivity.class);
-                 context.startActivity(intent);*/
-
-                Lead currentLead = getItem(pos);
-
-                Intent intent = new Intent(Intent.ACTION_SENDTO);
-                intent.setData(Uri.parse("mailto:"));
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"gdv.narendra@gmail.com;"});
-                intent.putExtra(Intent.EXTRA_SUBJECT, "Connect Lead notification");
-                intent.putExtra(Intent.EXTRA_TEXT, "Hello "+currentLead.getName()+", "+
-                        "\n\nI would like to order along with you!" +
-                        "\nMy order value is "+currentLead.getAmount()+
-                        "\nMy distance from you is "+currentLead.getDistance()+
-                        "\nMy rating is "+currentLead.getRating()+
-                        "\n\nRegards\n"+"Damodara");
-                if (intent.resolveActivity(context.getPackageManager()) != null){
-                    context.startActivity(intent);
-                }
-
-
+                Context context = RequestAdapter.super.getContext();
+                Intent intent = new Intent(context, LeadsActivity.class);
+                context.startActivity(intent);
             }
         });
 
