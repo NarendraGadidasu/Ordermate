@@ -19,6 +19,9 @@ public class MyRequestsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_requests);
 
+        /**hide action bar*/
+        getSupportActionBar().hide();
+
         ArrayList<Request> requests = new ArrayList<Request>();
 
         requests.add(new Request(1, 21, "a", "l", 21, 31, 1.2, 1));
