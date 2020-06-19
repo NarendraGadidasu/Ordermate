@@ -1,46 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:orientation="vertical">
+    android:layout_width="match_parent">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:gravity="center_horizontal"
-        android:text="My Requests"
-        android:textSize="32dp"
-        android:textColor = "@color/colorPrimary"
-        android:textStyle="bold"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <ListView
-        android:id="@+id/my_requests_list"
-        android:focusable="true"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_margin="8dp"
-        tools:context=".LeadsActivity"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center_horizontal"
+            android:text="Ordermate"
+            android:textSize="32dp"
+            android:textColor = "@color/colorPrimary"
+            android:textStyle="bold"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:layout_margin="8dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="My Requests"
+            android:textSize="16dp"
+            android:textColor = "@color/colorPrimary"
+            android:textStyle="bold"/>
+
+        <ListView
+            android:id="@+id/my_requests_list"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            tools:context=".LeadsActivity"/>
+    </LinearLayout>
 
     <Button
         android:id="@+id/add_request"
         android:layout_width="wrap_content"
         android:layout_height="64dp"
-        android:padding="16dp"
+        android:padding="8dp"
         android:layout_gravity="center"
         android:layout_margin = "16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
         android:text="+"
         android:textColor = "#FFFFFF"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:textStyle="bold"
         android:background="@drawable/light_round_button"/>
-</LinearLayout>
+</RelativeLayout>

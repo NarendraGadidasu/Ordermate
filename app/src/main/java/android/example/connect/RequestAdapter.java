@@ -79,7 +79,7 @@ public class RequestAdapter extends ArrayAdapter<Request> {
             public void onClick(View v) {
                 Context context = RequestAdapter.super.getContext();
                 Intent intent = new Intent(context, LeadsActivity.class);
-                context.startActivity(intent);
+                 context.startActivity(intent);
             }
         });
 

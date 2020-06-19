@@ -16,15 +16,15 @@ public class MyloginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        /**hide status bar*/
+        /**set the content on load*/
+        setContentView(R.layout.activity_mylogin);
+
+        /**hide status bar
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);*/
 
         /**hide action bar*/
         getSupportActionBar().hide();
-
-        /**set the content on load*/
-        setContentView(R.layout.activity_mylogin);
 
         /**Define what should happen on clicking the button login*/
         Button login = (Button) findViewById(R.id.login);

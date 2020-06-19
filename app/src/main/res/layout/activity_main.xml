@@ -37,7 +37,16 @@
         android:gravity="center_horizontal"
         android:text="Ordermate"
         android:textSize="32dp"
-        android:textColor = "@color/colorPrimaryDark"
+        android:textColor = "@color/colorPrimary"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="New Request"
+        android:textSize="16dp"
+        android:textColor = "@color/colorPrimary"
         android:textStyle="bold"/>
 
     <TextView
@@ -45,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="Location"
-        android:textColor = "@color/colorPrimaryDark"
+        android:textColor = "@color/colorPrimary"
         android:textAppearance="@android:style/TextAppearance.Medium"
         android:textStyle="bold"/>
 
@@ -61,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="Website"
-        android:textColor = "@color/colorPrimaryDark"
+        android:textColor = "@color/colorPrimary"
         android:textAppearance="@android:style/TextAppearance.Medium"
         android:textStyle="bold"/>
 
@@ -111,7 +120,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="Your Amount"
-        android:textColor = "@color/colorPrimaryDark"
+        android:textColor = "@color/colorPrimary"
         android:textAppearance="@android:style/TextAppearance.Medium"
         android:textStyle="bold"/>
 
@@ -140,7 +149,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="Expected Amount"
-        android:textColor = "@color/colorPrimaryDark"
+        android:textColor = "@color/colorPrimary"
         android:textAppearance="@android:style/TextAppearance.Medium"
         android:textStyle="bold"/>
 
@@ -169,7 +178,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="Maximum Distance"
-        android:textColor = "@color/colorPrimaryDark"
+        android:textColor = "@color/colorPrimary"
         android:textAppearance="@android:style/TextAppearance.Medium"
         android:textStyle="bold"/>
 
@@ -199,7 +208,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="Request active for "
-        android:textColor = "@color/colorPrimaryDark"
+        android:textColor = "@color/colorPrimary"
         android:textAppearance="@android:style/TextAppearance.Medium"
         android:textStyle="bold"/>
 
@@ -236,11 +245,11 @@
         android:layout_height="64dp"
         android:padding="16dp"
         android:layout_gravity="center"
-        android:text="Find my Ordermate!"
+        android:text="Add Request"
         android:textColor = "#FFFFFF"
         android:textAppearance="@android:style/TextAppearance.Medium"
         android:textStyle="bold"
-        android:background="@drawable/dark_rectangle_button"/>
+        android:background="@drawable/light_round_button"/>
 
     <View
         android:layout_width="match_parent"
