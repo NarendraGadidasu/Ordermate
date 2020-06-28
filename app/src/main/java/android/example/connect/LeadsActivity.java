@@ -18,6 +18,9 @@ public class LeadsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leads);
 
+        /**hide action bar*/
+        getSupportActionBar().hide();
+
         ArrayList<Lead> leads = new ArrayList<Lead>();
 
         leads.add(new Lead("Manasa", 5, 0.4, 18));
