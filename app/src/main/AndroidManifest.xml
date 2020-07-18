@@ -16,10 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.ordermate.ordermate.LeadsActivity"
-            android:label="Ordermate Leads" />
-        <activity android:name="com.ordermate.ordermate.MainActivity"></activity>
     </application>
 
 </manifest>
