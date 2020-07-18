@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "709420884845",
+    "firebase_url": "https://ordermate-668cf.firebaseio.com",
+    "project_id": "ordermate-668cf",
+    "storage_bucket": "ordermate-668cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709420884845:android:f76b980a28e55266f9b064",
+        "android_client_info": {
+          "package_name": "com.ordermate.ordermate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709420884845-t6q0hnpl61uigaa8o8noop1h0fusaqfo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEn8I9UtIKI-9uH9Nuaz5xoL4tE1zZA00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709420884845-t6q0hnpl61uigaa8o8noop1h0fusaqfo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

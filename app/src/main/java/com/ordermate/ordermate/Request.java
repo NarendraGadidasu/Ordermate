@@ -1,4 +1,4 @@
-package android.example.connect;
+package com.example.connect;
 
 public class Request {
 
