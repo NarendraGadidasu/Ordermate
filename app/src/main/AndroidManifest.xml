@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="android.example.connect">
+    package="com.ordermate.ordermate">
 
     <application
         android:allowBackup="true"
@@ -9,18 +9,17 @@
         android:roundIcon="@mipmap/new_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MyRequestsActivity"></activity>
-        <activity android:name=".MyloginActivity">
+        <activity android:name="com.ordermate.ordermate.MyRequestsActivity"></activity>
+        <activity android:name="com.ordermate.ordermate.MyloginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".LeadsActivity"
+            android:name="com.ordermate.ordermate.LeadsActivity"
             android:label="Ordermate Leads" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name="com.ordermate.ordermate.MainActivity"></activity>
     </application>
 
 </manifest>

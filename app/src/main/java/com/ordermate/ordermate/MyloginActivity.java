@@ -1,9 +1,9 @@
-package com.example.connect;
+package com.ordermate.ordermate;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.example.connect.R;
+import com.ordermate.ordermate.R;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;

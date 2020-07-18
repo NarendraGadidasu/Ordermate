@@ -1,4 +1,4 @@
-package com.example.connect;
+package com.ordermate.ordermate;
 
 import org.junit.Test;
 

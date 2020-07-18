@@ -1,8 +1,8 @@
-package com.example.connect;
+package com.ordermate.ordermate;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.example.connect.R;
+import com.ordermate.ordermate.R;
 import android.os.Bundle;
 import android.widget.ListView;
 

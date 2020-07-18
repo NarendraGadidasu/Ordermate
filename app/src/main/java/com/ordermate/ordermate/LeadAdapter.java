@@ -1,9 +1,9 @@
-package com.example.connect;
+package com.ordermate.ordermate;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.example.connect.R;
+import com.ordermate.ordermate.R;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
