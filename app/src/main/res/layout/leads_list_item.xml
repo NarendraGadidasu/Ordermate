@@ -10,7 +10,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:src = "@drawable/family_daughter"
+            />
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -33,7 +40,9 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1.5"
+            android:layout_weight="1"
+            android:layout_marginRight = "8dp"
+            android:layout_marginLeft="8dp"
             android:orientation="vertical">
             <TextView
                 android:layout_height="wrap_content"
@@ -49,12 +58,87 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/list_item_connect"
+            android:id="@+id/list_item_map"
             android:focusable="false"
-            android:layout_width="0dp"
+            android:layout_width="56dp"
             android:layout_height="match_parent"
+            android:text="Map"
+            android:textColor="#FFFFFF"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:background="@drawable/light_round_button"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Connect"
+            android:layout_marginRight = "8dp"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/list_item_business"
+                tools:text="lutti"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_my_location"
+                tools:text="one"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/list_item_call"
+            android:focusable="false"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:text="Call"
+            android:textColor="#FFFFFF"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:background="@drawable/light_round_button"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight = "8dp"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/list_amount"
+                tools:text="lutti"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_valid_for"
+                tools:text="one"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/list_item_text"
+            android:focusable="false"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:text="Text"
             android:textColor="#FFFFFF"
             android:textAppearance="@android:style/TextAppearance.Medium"
             android:background="@drawable/light_round_button"/>

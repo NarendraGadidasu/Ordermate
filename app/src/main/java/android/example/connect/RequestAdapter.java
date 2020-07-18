@@ -59,27 +59,84 @@ public class RequestAdapter extends ArrayAdapter<Request> {
 
         TextView locationTextView = (TextView) listItemView.findViewById(R.id.my_requests_location);
 
-        locationTextView.setText(currentRequest.getLocation());
+        locationTextView.setText("My Location : " + currentRequest.getLocation());
 
         TextView businessTextView = (TextView) listItemView.findViewById(R.id.my_requests_business);
 
-        businessTextView.setText(currentRequest.getBusiness());
+        businessTextView.setText("Website : " + currentRequest.getBusiness());
 
         TextView myAmountTextView = listItemView.findViewById(R.id.my_requests_my_amount);
 
-        myAmountTextView.setText("My Amount: "+currentRequest.getYourAmount());
+        myAmountTextView.setText("My Amount: " + currentRequest.getYourAmount());
 
         TextView expectedAmountTextView = listItemView.findViewById(R.id.my_requests_expected_amount);
 
-        expectedAmountTextView.setText("Expected: "+currentRequest.getExpectedAmount());
+        expectedAmountTextView.setText("Expected Amount: " + currentRequest.getExpectedAmount());
 
-        Button findLeadsButton = (Button) listItemView.findViewById(R.id.my_requests_find_leads);
-        findLeadsButton.setOnClickListener(new View.OnClickListener() {
+        TextView nameTextView = (TextView) listItemView.findViewById(R.id.list_item_name);
+
+        nameTextView.setText(currentRequest.getName());
+
+        RatingBar ratingBar = (RatingBar) listItemView.findViewById(R.id.list_item_rating);
+
+        ratingBar.setRating(Float.parseFloat(currentRequest.getRating()+""));
+
+        TextView distanceTextView = listItemView.findViewById(R.id.list_item_distance);
+
+        distanceTextView.setText("Distance: "+currentRequest.getDistance());
+
+        TextView amountTextView = listItemView.findViewById(R.id.list_item_amount);
+
+        amountTextView.setText("Amount: "+currentRequest.getAmount());
+
+        Button mapButton = (Button) listItemView.findViewById(R.id.list_item_map);
+        mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Context context = RequestAdapter.super.getContext();
-                Intent intent = new Intent(context, LeadsActivity.class);
-                 context.startActivity(intent);
+                String uri = "http://maps.google.com/maps?saddr=" + 33.777671 + "," + -84.397297 + "&daddr=" + 33.763587 + "," + -84.35056;
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                context.startActivity(intent);
+            }
+        });
+
+        Button callButton = (Button) listItemView.findViewById(R.id.list_item_call);
+        callButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Context context = RequestAdapter.super.getContext();
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:0123456789"));
+                context.startActivity(intent);
+            }
+        });
+
+        Button textButton = (Button) listItemView.findViewById(R.id.list_item_text);
+        textButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Request currentRequest = getItem(pos);
+                Context context = RequestAdapter.super.getContext();
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"gdv.narendra@gmail.com;"});
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Connect Lead notification");
+                intent.putExtra(Intent.EXTRA_TEXT, "Hello "+currentRequest.getName()+", "+
+                        "\n\nI would like to order along with you!" +
+                        "\nMy order value is "+currentRequest.getAmount()+
+                        "\nMy distance from you is "+currentRequest.getDistance()+
+                        "\nMy rating is "+currentRequest.getRating()+
+                        "\n\nRegards\n"+"Damodara");
+                if (intent.resolveActivity(context.getPackageManager()) != null){
+                    context.startActivity(intent);
+                }
+            }
+        });
+
+        Button closeButton = (Button) listItemView.findViewById(R.id.list_item_close);
+        closeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
             }
         });
 

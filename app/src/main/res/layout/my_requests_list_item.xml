@@ -1,62 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:orientation = "horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    >
+    android:layout_height="wrap_content">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.5"
-            android:orientation="vertical">
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:id="@+id/my_requests_location"
-                tools:text="lutti"/>
+    android:orientation="vertical"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
-            <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:src = "@drawable/family_daughter"
+                />
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:id="@+id/my_requests_business"
-                tools:text="lutti"/>
+                android:layout_weight="1.5"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:padding = "4dp"
+                    android:id="@+id/list_item_name"
+                    tools:text="lutti"/>
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:id="@+id/list_item_rating"
+                    android:numStars="5"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight = "8dp"
+                android:layout_marginLeft="8dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:padding = "4dp"
+                    android:id="@+id/list_item_distance"
+                    tools:text="lutti"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding = "4dp"
+                    android:id="@+id/list_item_amount"
+                    tools:text="one"/>
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.5"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight = "8dp"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical"
+            android:background = "#EEEEEE">
             <TextView
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:layout_width="match_parent"
+                android:padding = "4dp"
+                android:id="@+id/my_requests_business"
+                tools:text="lutti"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding = "4dp"
+                android:id="@+id/my_requests_location"
+                tools:text="one"/>
+
+            <TextView
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:padding = "4dp"
                 android:id="@+id/my_requests_my_amount"
                 tools:text="lutti"/>
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding = "4dp"
                 android:id="@+id/my_requests_expected_amount"
                 tools:text="one"/>
         </LinearLayout>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
         <Button
-            android:id="@+id/my_requests_find_leads"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Leads"
-            android:textColor = "#FFFFFF"
+            android:id="@+id/list_item_map"
+            android:focusable="false"
+            android:layout_width="56dp"
+            android:layout_height="0dp"
+            android:layout_weight = "1"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:text="Map"
+            android:textColor="#FFFFFF"
             android:textAppearance="@android:style/TextAppearance.Medium"
             android:background="@drawable/light_round_button"/>
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/list_item_call"
+            android:focusable="false"
+            android:layout_width="56dp"
+            android:layout_height="0dp"
+            android:layout_weight = "1"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:text="Call"
+            android:textColor="#FFFFFF"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:background="@drawable/light_round_button"/>
 
+        <Button
+            android:id="@+id/list_item_text"
+            android:focusable="false"
+            android:layout_width="56dp"
+            android:layout_height="0dp"
+            android:layout_weight = "1"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:text="Text"
+            android:textColor="#FFFFFF"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:background="@drawable/light_round_button"/>
+
+        <Button
+            android:id="@+id/list_item_close"
+            android:focusable="false"
+            android:layout_width="56dp"
+            android:layout_height="0dp"
+            android:layout_weight = "1"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:text="Close"
+            android:textColor="#FFFFFF"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:background="@drawable/light_round_button"/>
+    </LinearLayout>
 
 </LinearLayout>

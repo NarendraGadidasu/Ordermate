@@ -23,7 +23,6 @@ public class LeadsActivity extends AppCompatActivity {
 
         ArrayList<Lead> leads = new ArrayList<Lead>();
 
-        leads.add(new Lead("Manasa", 5, 0.4, 18));
         leads.add(new Lead("Abhi", 3.5, 1.2, 19));
         leads.add(new Lead("Amy", 2.5, 1.4, 13));
         leads.add(new Lead("Suresh", 5, 0.6, 41));

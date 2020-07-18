@@ -20,7 +20,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-/**Creating a custom class LeaddAdapter as a sub-class of
+/**Creating a custom class LeadAdapter as a sub-class of
  * the class ArrayAdapter<Lead>
  */
 public class LeadAdapter extends ArrayAdapter<Lead> {
@@ -72,7 +72,7 @@ public class LeadAdapter extends ArrayAdapter<Lead> {
 
         amountTextView.setText("Amount: "+currentLead.getAmount());
 
-        Button connectButton = (Button) listItemView.findViewById(R.id.list_item_connect);
+        Button connectButton = (Button) listItemView.findViewById(R.id.list_item_map);
         connectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

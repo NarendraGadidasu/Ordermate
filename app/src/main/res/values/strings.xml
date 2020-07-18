@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Connect</string>
+    <string name="app_name">Ordermate</string>
     <string-array name="distance_units">
         <item>miles</item>
         <item>kms</item>
