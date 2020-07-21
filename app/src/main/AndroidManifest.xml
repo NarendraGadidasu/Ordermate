@@ -9,13 +9,28 @@
         android:roundIcon="@mipmap/new_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.ordermate.ordermate.MyRequestsActivity"></activity>
-        <activity android:name="com.ordermate.ordermate.MyloginActivity">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!--
+             The API key for Google Maps-based APIs.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/maps_api_key" />
+
+        <activity android:name=".FirebaseUIActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MyRequestsActivity" />
+        <activity android:name=".MyloginActivity"/>
+
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>
