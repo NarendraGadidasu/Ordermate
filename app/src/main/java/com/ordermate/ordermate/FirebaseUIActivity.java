@@ -2,6 +2,8 @@ package com.ordermate.ordermate;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,13 +30,34 @@ public class FirebaseUIActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firebase_ui);
+        getSupportActionBar().hide();
 
+        /**Define what should happen on clicking the button login*/
+        Button login = (Button) findViewById(R.id.login_or_signup);
 
-        FirebaseAuth auth = FirebaseAuth.getInstance();
+        final FirebaseAuth auth = FirebaseAuth.getInstance();
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                if (auth.getCurrentUser() != null) {
+                    // already signed in
+                    createSignInIntent();
+                    /**Intent intent = new Intent(FirebaseUIActivity.this, MyRequestsActivity.class);
+                    startActivity(intent);*/
+                } else {
+                    // not signed in
+                    createSignInIntent();
+                }
+            }
+        });
+
 
         if (auth.getCurrentUser() != null) {
             // already signed in
             createSignInIntent();
+            /**Intent intent = new Intent(FirebaseUIActivity.this, MyRequestsActivity.class);
+            startActivity(intent);*/
         } else {
             // not signed in
             createSignInIntent();

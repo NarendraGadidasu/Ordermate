@@ -1,8 +1,13 @@
 package com.ordermate.ordermate;
 
+
+import com.google.android.gms.maps.model.LatLng;
+import com.google.firebase.firestore.IgnoreExtraProperties;
+
+@IgnoreExtraProperties
 public class Request {
 
-    private int userId;
+    private String userId;
     private long requestId;
     private String location;
     private String business;
@@ -15,7 +20,7 @@ public class Request {
     private double distance;
     private double amount;
 
-    public Request(int userId, long requestId, String loc, String bus, double yAmt, double eAmt, double mDist, double mWait,String nme, double rtng, double dist, double amt){
+    public Request(String userId, long requestId, String loc, String bus, double yAmt, double eAmt, double mDist, double mWait,String nme, double rtng, double dist, double amt){
         location = loc;
         business = bus;
         yourAmount = yAmt;

@@ -149,7 +149,7 @@
             android:layout_weight = "1"
             android:layout_marginBottom="2dp"
             android:layout_marginTop="2dp"
-            android:text="Text"
+            android:text="Email"
             android:textColor="#FFFFFF"
             android:textAppearance="@android:style/TextAppearance.Medium"
             android:background="@drawable/light_round_button"/>
