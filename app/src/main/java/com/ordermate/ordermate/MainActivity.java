@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-        Places.initialize(getApplicationContext(), "AIzaSyBv93mUyDCvgNUcrP95-NnqsSGlAV6VxXA");
+        Places.initialize(getApplicationContext(), "-");
 
         PlacesClient placesClient = Places.createClient(this);
 
